@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="1666962719432.jpg">
+    <title>My Portfolio</title>
+    <style>
+      .top{
+        margin-bottom: 0px;
+      }
+      h1{
+        text-align: center;
+      }
+
+      h2{
+        background-color: grey;
+      }
+
+        .my img{
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          transition: 0.5s steps(4,end);
+          border-radius:50%;
+          height:50vh;
+          width:25vw;
+        }
+
+        h2{
+          text-align: center;
+          padding: 1%;
+          width: 100%;
+          font-size: 3.5vh;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            position: sticky;
+            z-index: 1 ;
+            top: 0;
+            z-index: 2;
+            font-size: 2.2vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: auto;
+            width: 100%;
+        }
+
+        nav a{
+            text-decoration: none;
+            padding: 0.5% 1%;
+            text-align: center;
+            /* float: left; */
+            color: white;
+        }
+
+        nav a:hover{
+            color:gold;
+            border-bottom:goldenrod 3px solid;
+        }
+
+        table,th,td{
+          border:blue 3px solid;
+          border-collapse: collapse;
+        }
+ 
+        .pic {
+              display: inline-block;
+        }
+
+        .my img:hover{
+            transform: scale(1.35);
+            opacity: 0.80;
+        }
+        .my h1:hover{
+            transform: scale(1.5);
+            width: 100vw;
+        }
+        h2:hover{
+          text-transform: uppercase;
+        }
+        .tenth img:hover, .twelveth img:hover{
+            transform: scale(1.5);
+            opacity: 1.0;
+        }
+
+        .twelveth img{
+          height: 50vh;
+          width: 23vw;
+          /* margin-top: -30vh; */
+          margin-left: 35vw;
+        }
+                .tenth img{
+          height: 50vh;
+          width: 23vw;
+          /* margin-top: -30vh; */
+          margin-left: 35vw;
+        }
+
+        #mahadev{
+            height: 0px;
+            width: 0px;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            overflow: hidden;
+            display: flex;
+            transition: 1.3s ease-in-out;
+        }
+
+        #mahadev:target{
+          height: 50vh;
+            width: 30vw;
+            background-color: grey;
+            top: 20vh;
+            left: 35vw;
+            padding: 2vw;  
+        }
+        #mahadev:target a{
+          font-size: 5vh;
+          margin-top: 0%;
+          position: fixed;
+        }
+        #mahadev:target img{
+          height: 55vh;
+          width: 55vw;
+        }
+
+        #kingkohli{
+            height: 0px;
+            width: 0px;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 1.3s ease-in-out;
+        }
+
+        #kingkohli:target{
+            height: 50vh;
+            width: 30vw;
+            background-color: grey;
+            top: 20vh;
+            left: 35vw;
+            padding: 2vw;
+            font-size: 5vh;
+          margin-top: 0%;
+          position: fixed;
+        }
+        section{
+            width: 80%;
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            /* font-size: 20vh; */
+            align-items: center;
+            margin: auto;
+            height: auto;
+        }
+
+        section h1:hover{
+            transform: scale(1.5);
+        }
+
+        .timeline{
+            position: relative;
+            width: 65%;
+        }
+
+        .time-box{
+          position: relative;  
+          width: 35%;
+          margin: 0.8%;
+          left: 5%;
+          min-height: 15vh;
+          background-color: white;
+          font-size: 100%;
+      }
+
+      .time-box::before{
+         content: '';
+         background-image: url(githubf.png);
+         display: inline-block;
+         height: 5vh;
+         width: 1.5vw;
+         background-size: cover;
+      }
+
+      .timeline-divider{
+          position: absolute;
+          height: 89%;
+          border: 3px dashed rgb(148, 165, 249);
+          top: 7%;
+          left: 50%;
+          right: 50%;
+      }
+
+      .traveller{
+          position: sticky;
+          top: 25%;
+          margin: -3.6vw;
+      }
+
+      .time-box:nth-child(2n+1):after{
+          content: '';
+          border-radius: 50%;
+          width: 0.5rem;
+          height: 0.5rem;
+          background-color: red;
+          position: absolute;
+          right: -29%;
+          top: 50%;
+          z-index: 1;
+      }
+
+      .time-box:nth-child(2n):after{
+          content: '';
+          border-radius: 50%;
+          width: 0.5rem;
+          height: 0.5rem;
+          background-color: red;
+          position: absolute;
+          left: -28%;
+          top: 50%;
+          z-index: 1;
+      }
+
+      .time-box:nth-child(2n){
+          left: 59%;
+      }
+
+      .mystyle {
+        background-color: black;
+        color: gold;
+      }  
+
+      .container{
+        position: relative;
+        width: 25vw;
+      }
+
+      .image {
+        opacity: 1;
+        display: inline;
+        width: 30vw;
+        height: 40vh;
+        transition: .5s ease;
+        backface-visibility: hidden;
+      }
+
+      .container:hover .image {
+        opacity: 0.7;
+      }
+
+      </style>
+ <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    sup{
+      background-color: red;
+      color: yellow;
+    }
+   
+    footer{
+      text-align: center;
+      background-color: gray;
+      height: auto;
+      width: 100%;
+      font-size: 3.5vh;
+    }
+    </style>
+        </style>
+    <script>
+      function myFunction() {
+      var element = document.getElementById("myDIV");
+      element.classList.toggle("mystyle");
+      }
+    </script>
+    
+
+  </head>
+  <body bgcolor="lightgrey">
+    <div id="myDIV">
+        <button onclick="myFunction()"><img src="theme.png" height="25px" width="25px"></button>
+    <div class="my" id="totop">
+      <h1>Faldu Arpit</h1>
+    <img src="1666962719432.jpg">
+  </div>
+  <br>
+  <div class="na">
+    <nav>
+        <a href="#PI"><p class="n">Personal Info</p></a>
+        <a href="#EQ"><p>Education Qualification </p></a>
+        <a href="#PS"><p>Professional Skills</p></a>
+        <a href="#Hbb"><p>Hobbies<sup>New</sup></p></a>
+        <a href="#Pin"><p>Interest<sup>New</sup></p></a>
+        <a href="#Ach"><p>Achievements</p></a>
+        <a href="#CI"><p>Contact Me</p></a>#
+    </nav>
+  </div>
+    <hr>
+
+    <ul>
+      <div id="PI">
+      <li><h2>Personal Information</h2></li>
+      <div class="cen">
+      <p>I am born and brought up in Jamnagar. I live in a nuclear family with my father,mother and elder sister.</p>
+    </div>
+    
+    <hr>
+    <div id="EQ">
+    <li><h2>Educational Qualification</h2></li>
+    <div class="cen">
+    <ol type="i">
+        <li><p>I scored 89.50% marks in <a href="#10"> 10th std</a> with 99.66PR.</p></li>
+        <li><p>I scored 81.23% in <a href="#12">12th boards</a>. I scored 96.98 PR in <b>JEE MAINS 2022</b> with <b>EWS AIR:3371</b> and I have qualified <b>JEE ADVANCED</b> with <b>EWS AIR:3322</b>.I have completed my schooling from <em>Modi Schools </em>,Jamnagar.</p></li>
+        <li><p>Currently pursuing <b>B.Tech</b> in <b>Computer Engineering</b> at <b>Dharmsinh Desai University</b>,Nadiad.</p></li>
+      </ol>
+    </div>
+</div> 
+<div class="exp">
+<section id="Experience">
+  <div class="timeline">
+      <div class="time-box">
+          Student at Bhavan's School<br><br>
+          I studied at Bhavan's Shri A.K. Doshi Vidyalaya from standard 1st to 8th.
+      </div>
+      <div class="time-box">
+          Student at Prime School<br><br>
+          I studied at Prime School in 9th standard.
+      </div>
+      <div class="time-box">
+          Student at Modi School<br><br>
+          I studied at P.V. Modi School from standard 10th to 12th.
+      </div>
+      <div class="time-box">
+          Student at DDU<br><br>
+          I am pursuing my B.Tech degree from Dharamsinh Desai University.
+      </div>
+      <div class="timeline-divider">
+          <div class="traveller">
+              <img src="p3.png" alt="Plane" height="75px" width="75px">
+          </div>
+      </div>
+  </div>
+</section>
+</div>
+      <hr>
+
+    <div id="PS">
+        <li><h2>Professional Skills</h2></li>
+        <div class="cen">  
+     <ol type="i">
+       <li><p>Have a <b>calculative mind</b> and <b>positive attitude</b> to work in group.</p></li>
+        <li><p>Have a good practice and experience of <b>C</b> and learning <b>C++, HTML, CSS, JAVASCRIPT</b> and <b>PHP</b>.</p></li>
+        <li>I am also intereted in solving problems related to <b>DSA</b> and <b>DBMS</b> and have a good hand into it.</li>
+    </ol>
+  </div>
+  </div>
+
+    
+    <div class="c">
+      <div class="cen" style="margin-left: 40vw;"> 
+        <details>
+          DSA is all about logic based algorithms and the with the help of DSA we can make efficient algorithms which has less time as well as space complexity.
+          <summary>
+            <b>DSA</b>
+          </summary>
+        </details>
+
+        <details>
+          DBMS is a tool which is used to manage the databses and manages concurrent transactions as well.  
+          <summary>
+            <b>DBMS</b>
+          </summary>
+        </details>
+
+          <details>C programming language is one of the oldest programming languages.It is used to build operating systems and viruses.
+          <summary> <b>C Language</b></summary>
+          </details>
+          <details>C++ is the extended version of C language. It is object-oreinted programming language.It is used to build app's and is one of the most popular coding language used for competitive coding.
+            <summary> <b>C++:Intro to OOP's</b></summary>
+            </details>
+            <details>HTML is used to create the basic structure of any website.It is a frontend-webdevelopment tool.
+              <summary> <b>HTML-Hyper Text Mark-Up Language</b></summary>
+              </details>
+              <details>CSS is used to style any website.It is most powerful tool to design the website.
+                <summary> <b>CSS-Cascading Styles</b></summary>
+                </details>
+                <details>PHP is a backend language which manages database and stores the info entered by the user via forms.
+                  <summary> <b>PHP</b></summary>
+                  </details>
+                </div>
+      </div>
+  </div>
+    <hr>
+    <div id="Hbb">
+        <li><h2>Hobbies</h2></li>
+        <div class="container">
+        <img src="cricket.jpg" class="image" style="width:30vw">
+        </div>
+        <div class="container">
+        <img src="badminton.jpg" class="image" style="width:30vw">
+      </div>
+      <div class="container">
+        <img src="kho-kho.jpg" class="image" style="width:30vw">
+      </div>
+      <div class="container">
+        <img src="swimming.jpg" class="image" style="width:30vw">
+      </div>
+    <hr>
+
+    <div id="Pin">
+<li><h2>Personal interest</h2></li>
+<div class="cen">
+<ol type="i">
+        <li>Sporty,fit and enthusiastic.</li> 
+        <li><b>Big fan of <a href="#kingkohli">King Kohli</a></b></li>
+        <div id="kingkohli">
+          <a href="#Pin">X</a>
+          <img src="download.jpg" alt="kingkohli">
+        </div>
+        <li>Love playing outdoor games like <b>Cricket</b>,<b>Kho-Kho</b> and <b>Badminton</b>.</li>
+        <li><b>Har Har <a href="#mahadev">Mahadev.</a></b></li>
+        <div id="mahadev">
+          <a href="#Pin">X</a>
+          <img src="61nzcns-G2L._SL1296_.jpg" alt="Mahadev">
+        </div>
+      </ol>
+    </div>
+    </div>
+
+      <hr>
+
+      <div id="Ach">
+        <li><h2>Achievements</h2></li>
+        <div class="cen">
+        <ol type="i">
+            <li>Bagged 2nd rank in kho-kho tournament of our collage in <b>Youvotsav 2k23</b> out of <b>34</b> teams.</li>
+            <li>Bagged 3rd rank in <b>Cricket tournament</b> in <b>Youvostav 2k23.</b></li>
+        </ol>
+      </div>
+      </div>
+<hr>
+<div class="tenth" id="10">
+  <li><h2>10th Result</h2></li>
+
+<img src="IMG-20221105-WA0006.jpg">
+</div>
+    <hr>
+    <div class="twelveth" id="12">
+      <li><h2>12th Result</h2></li>
+  <img src="IMG-20221007-WA0007.jpg">
+</div>
+<hr>
+ 
+    <hr>
+    <div id="CI">
+      <li><h2>Contact Me</h2></li>
+      <div class="cen" style="margin-left: 37vw;">
+      <p><a href="https://www.linkedin.com/in/arpit-faldu-992505251"  target="blank"><img src="photo.jpg" alt="linkedin" height="40"></a><br>:Arpit Faldu</p>
+      <p><a href="mailto:falduarpit2004@gmail.com" target="blank"><img src="gmail.jpg" alt="mail" height="40"></a><br>:falduarpit2004@gmail.com</p>
+      <p><a href="https://github.com/ArpitFaldu" target="blank"><img src="githubf.png" alt="Github" height="40"> </a> </p>
+    </div>
+    </div>
+  <div class="top">
+    <a href="#totop"><img src="top.jpg" alt="Go to top" height="50px" width="50px"></a>
+  </div>
+  <footer>Thank you for visiting my website.</footer>
+</div>
+</div>
+</ul>
+  </body>
+</html>
